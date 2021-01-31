@@ -6,12 +6,8 @@
         <router-view></router-view>
       </li>
       <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
+        <router-link to="/javaScript">JavaScript相关</router-link>
+        <router-view></router-view>
       </li>
       <li>
         <a
