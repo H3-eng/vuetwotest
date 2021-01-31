@@ -1,15 +1,9 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
     <ul>
       <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
+        <router-link to="/name">优雅命名</router-link>
+        <router-view></router-view>
       </li>
       <li>
         <a
