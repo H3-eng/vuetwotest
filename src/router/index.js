@@ -2,7 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Name from '@/components/Name'
-import JavaScript from '@/components/JavaScript'
+import arrayDataPro from '@/components/JavaScript/arrayDataPro'
+import conditionalJudgement from '@/components/JavaScript/conditionalJudgement'
 
 Vue.use(Router)
 
@@ -19,9 +20,14 @@ export default new Router({
       component: Name
     },
     {
-      path: '/javaScript',
-      name: 'javaScript',
-      component: JavaScript
+      path: '/arrayDataPro',
+      name: 'arrayDataPro',
+      component: arrayDataPro
+    },
+    {
+      path: '/conditionalJudgement',
+      name: 'conditionalJudgement',
+      component: conditionalJudgement
     }
   ]
 })

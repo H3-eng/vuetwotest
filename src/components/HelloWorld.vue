@@ -1,75 +1,28 @@
 <template>
   <div class="hello">
-    <ul>
-      <li>
-        <router-link to="/name">优雅命名</router-link>
-        <router-view></router-view>
-      </li>
-      <li>
-        <router-link to="/javaScript">JavaScript相关</router-link>
-        <router-view></router-view>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
+    <div>
+      <h2>优雅命名</h2>
+      <ul>
+        <li>
+          <router-link to="/name">优雅命名</router-link>
+          <router-view></router-view>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h2>JavaScript相关</h2>
+      <ul>
+        <li>
+          <router-link to="/arrayDataPro">数组数据处理</router-link>
+          <router-view></router-view>
+        </li>
+        <li>
+          <router-link to="/conditionalJudgement">条件判断</router-link>
+          <router-view></router-view>
+        </li>
+      </ul>
+    </div>
+
   </div>
 </template>
 
