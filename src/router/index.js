@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Name from '@/components/Name'
 import arrayDataPro from '@/components/JavaScript/arrayDataPro'
+import stringDataPro from '@/components/JavaScript/stringDataPro'
+import objDataPro from '@/components/JavaScript/objDataPro'
 import conditionalJudgement from '@/components/JavaScript/conditionalJudgement'
 
 Vue.use(Router)
@@ -23,6 +25,16 @@ export default new Router({
       path: '/arrayDataPro',
       name: 'arrayDataPro',
       component: arrayDataPro
+    },
+    {
+      path: '/stringDataPro',
+      name: 'stringDataPro',
+      component: stringDataPro
+    },
+    {
+      path: '/objDataPro',
+      name: 'objDataPro',
+      component: objDataPro
     },
     {
       path: '/conditionalJudgement',
