@@ -6,6 +6,8 @@ import arrayDataPro from '@/components/JavaScript/arrayDataPro'
 import stringDataPro from '@/components/JavaScript/stringDataPro'
 import objDataPro from '@/components/JavaScript/objDataPro'
 import conditionalJudgement from '@/components/JavaScript/conditionalJudgement'
+import taobaoImage from '@/components/taobao/taobaoImage'
+import sgui from '@/components/componentLibrary/sgui'
 
 Vue.use(Router)
 
@@ -40,6 +42,17 @@ export default new Router({
       path: '/conditionalJudgement',
       name: 'conditionalJudgement',
       component: conditionalJudgement
+    },
+    {
+      path: '/taobaoImage',
+      name: 'taobaoImage',
+      component: taobaoImage
+    },
+    {
+      path: '/sgui',
+      name: 'sgui',
+      component: sgui
     }
+
   ]
 })
