@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import RouterModule from './modules'
 import HelloWorld from '@/components/HelloWorld'
 import Name from '@/components/Name'
 import arrayDataPro from '@/components/JavaScript/arrayDataPro'
@@ -8,11 +9,11 @@ import objDataPro from '@/components/JavaScript/objDataPro'
 import conditionalJudgement from '@/components/JavaScript/conditionalJudgement'
 import taobaoImage from '@/components/taobao/taobaoImage'
 import sgui from '@/components/componentLibrary/sgui'
-
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    ...RouterModule,
     {
       path: '/',
       name: 'HelloWorld',
@@ -53,6 +54,5 @@ export default new Router({
       name: 'sgui',
       component: sgui
     }
-
   ]
 })

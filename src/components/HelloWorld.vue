@@ -37,6 +37,10 @@
           <router-link to="/sgui">sgui组件库</router-link>
           <router-view></router-view>
         </li>
+        <li>
+          <router-link to="/sgModal">弹窗</router-link>
+          <router-view></router-view>
+        </li>
       </ul>
     </div>
     <div>
