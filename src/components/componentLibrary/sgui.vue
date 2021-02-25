@@ -123,7 +123,7 @@ export default {
         radio: [
           {required: true, message: 'Radio 请选择', trigger: 'change'},
           {validator: (rule, value, callback) => {
-            if (value == '3') {
+            if (value === '3') {
               callback(new Error('Radio 不能为该值'))
             } else {
               callback()

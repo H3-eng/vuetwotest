@@ -8,7 +8,19 @@
     }],
     "stage-2"
   ],
-  "plugins": ["transform-vue-jsx", "transform-runtime"],
+  "plugins": [
+    [
+      "component",
+      {
+        "libraryName": "southgisui",
+        "styleLibrary":{
+          "base":false,
+          "styleLibraryName": "sgui-theme"
+        },
+        "style":false
+      }
+    ],
+    "transform-vue-jsx", "transform-runtime"],
   "env": {
     "test": {
       "presets": ["env", "stage-2"],
