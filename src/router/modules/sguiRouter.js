@@ -1,5 +1,6 @@
-import sgModal from '@/components/componentLibrary/sgModal'
-import sgForm from '@/components/componentLibrary/sgForm'
+import sgModal from '@/components/componentLibrary/sgui/sgModal'
+import sgForm from '@/components/componentLibrary/sgui/sgForm'
+import sgTree from '@/components/componentLibrary/sgui/sgTree'
 export default [
   {
     path: '/sgModal',
@@ -10,5 +11,10 @@ export default [
     path: '/sgForm',
     name: 'sgForm',
     component: sgForm
+  },
+  {
+    path: '/sgTree',
+    name: 'sgTree',
+    component: sgTree
   }
 ]

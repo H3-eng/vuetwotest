@@ -6,13 +6,21 @@
           <sg-button type="primary" outline @click="openModal">弹窗封装</sg-button>
           <sgModal></sgModal>
         </li>
+        <li>
+        <router-link to="/sgForm">表单</router-link>
+        <router-view></router-view>
+      </li>
+      <li>
+        <router-link to="/sgTree">树结构</router-link>
+        <router-view></router-view>
+      </li>
       </ul>
     </div>
   </div>
 </template>
 
 <script>
-import sgModal from '@/components/componentLibrary/sgModal'
+import sgModal from '@/components/componentLibrary/sgui/sgModal'
 export default {
   name: 'sgui',
   components: {
