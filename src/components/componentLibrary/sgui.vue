@@ -18,6 +18,10 @@
           <router-link to="/sguiStep">步骤条</router-link>
           <router-view></router-view>
         </li>
+        <li>
+          <router-link to="/sguiContainer">布局</router-link>
+          <router-view></router-view>
+        </li>
       </ul>
     </div>
   </div>
