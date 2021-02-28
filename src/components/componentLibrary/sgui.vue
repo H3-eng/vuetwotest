@@ -6,6 +6,18 @@
           <sg-button type="primary" outline @click="openModal">弹窗封装</sg-button>
           <sgModal></sgModal>
         </li>
+        <li>
+          <router-link to="/sguiTab">标签页</router-link>
+          <router-view></router-view>
+        </li>
+        <li>
+          <router-link to="/sguiButton">按钮</router-link>
+          <router-view></router-view>
+        </li>
+        <li>
+          <router-link to="/sguiStep">步骤条</router-link>
+          <router-view></router-view>
+        </li>
       </ul>
     </div>
   </div>
