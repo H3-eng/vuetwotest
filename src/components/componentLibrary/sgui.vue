@@ -11,13 +11,29 @@
           ></sgModal>
         </li>
         <li>
-        <router-link to="/sgForm">表单</router-link>
-        <router-view></router-view>
-      </li>
-      <li>
-        <router-link to="/sgTree">树结构</router-link>
-        <router-view></router-view>
-      </li>
+          <router-link to="/sgForm">表单</router-link>
+          <router-view></router-view>
+        </li>
+        <li>
+          <router-link to="/sgTree">树结构</router-link>
+          <router-view></router-view>
+        </li>
+        <li>
+          <router-link to="/sguiTab">标签页</router-link>
+          <router-view></router-view>
+        </li>
+        <li>
+          <router-link to="/sguiButton">按钮</router-link>
+          <router-view></router-view>
+        </li>
+        <li>
+          <router-link to="/sguiStep">步骤条</router-link>
+          <router-view></router-view>
+        </li>
+        <li>
+          <router-link to="/sguiContainer">布局</router-link>
+          <router-view></router-view>
+        </li>
       </ul>
     </div>
   </div>

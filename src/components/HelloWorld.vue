@@ -37,10 +37,6 @@
           <router-link to="/sgui">sgui组件库</router-link>
           <router-view></router-view>
         </li>
-        <li>
-          <router-link to="/sgModal">弹窗</router-link>
-          <router-view></router-view>
-        </li>
       </ul>
     </div>
     <div>
@@ -68,6 +64,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 h1, h2 {
   font-weight: normal;
 }
