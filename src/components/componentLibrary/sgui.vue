@@ -4,18 +4,18 @@
       <ul>
         <li>
           <sg-button type="primary" outline @click="openModal">弹窗封装</sg-button>
-          <sgModal
+          <sguiModal
             v-if="sgModalVisible"
             :sgModalVisible="sgModalVisible"
             @closeModal="closeModal"
-          ></sgModal>
+          ></sguiModal>
         </li>
         <li>
-          <router-link to="/sgForm">表单</router-link>
+          <router-link to="/sguiForm">表单</router-link>
           <router-view></router-view>
         </li>
         <li>
-          <router-link to="/sgTree">树结构</router-link>
+          <router-link to="/sguiTree">树结构</router-link>
           <router-view></router-view>
         </li>
         <li>
@@ -32,6 +32,10 @@
         </li>
         <li>
           <router-link to="/sguiContainer">布局</router-link>
+          <router-view></router-view>
+        </li>
+        <li>
+          <router-link to="/sguiTimeline">时间线</router-link>
           <router-view></router-view>
         </li>
       </ul>

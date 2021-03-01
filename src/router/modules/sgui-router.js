@@ -4,6 +4,8 @@ import sguiTab from '@/components/componentLibrary/sgui/sguiTab'
 import sguiButton from '@/components/componentLibrary/sgui/sguiButton'
 import sguiStep from '@/components/componentLibrary/sgui/sguiStep'
 import sguiContainer from '@/components/componentLibrary/sgui/sguiContainer'
+import sguiTimeline from '@/components/componentLibrary/sgui/sguiTimeline'
+
 export default [
   {
     path: '/sguiForm',
@@ -29,5 +31,10 @@ export default [
     path: '/sguiContainer',
     name: 'sguiContainer',
     component: sguiContainer
+  },
+  {
+    path: '/sguiTimeline',
+    name: 'sguiTimeline',
+    component: sguiTimeline
   }
 ]
