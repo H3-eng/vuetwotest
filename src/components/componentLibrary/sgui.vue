@@ -40,11 +40,11 @@
 </template>
 
 <script>
-import sgModal from '@/components/componentLibrary/sgui/sgModal'
+import sguiModal from '@/components/componentLibrary/sgui/sguiModal'
 export default {
   name: 'sgui',
   components: {
-    sgModal
+    sguiModal
   },
   data () {
     return {

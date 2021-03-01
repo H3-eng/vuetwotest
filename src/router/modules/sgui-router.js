@@ -1,19 +1,14 @@
-import sgModal from '@/components/componentLibrary/sgModal'
-import sgForm from '@/components/componentLibrary/sgForm'
-import sguiTab from '@/components/componentLibrary/sguiTab'
-import sguiButton from '@/components/componentLibrary/sguiButton'
-import sguiStep from '@/components/componentLibrary/sguiStep'
-import sguiContainer from '@/components/componentLibrary/sguiContainer'
+
+import sguiForm from '@/components/componentLibrary/sgui/sguiForm'
+import sguiTab from '@/components/componentLibrary/sgui/sguiTab'
+import sguiButton from '@/components/componentLibrary/sgui/sguiButton'
+import sguiStep from '@/components/componentLibrary/sgui/sguiStep'
+import sguiContainer from '@/components/componentLibrary/sgui/sguiContainer'
 export default [
   {
-    path: '/sgModal',
-    name: 'sgModal',
-    component: sgModal
-  },
-  {
-    path: '/sgForm',
-    name: 'sgForm',
-    component: sgForm
+    path: '/sguiForm',
+    name: 'sguiForm',
+    component: sguiForm
   },
   {
     path: '/sguiTab',
