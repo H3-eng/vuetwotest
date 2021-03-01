@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="sgForm">
     <sg-form ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="120">
       <sg-row>
         <sg-col :column="6">
-          <sg-form-item label="Input" prop="input">
+          <sg-form-item label="Input" prop="input" ref="input">
             <sg-input v-model="formValidate.input"></sg-input>
           </sg-form-item>
         </sg-col>
@@ -54,16 +54,15 @@
             <sg-combo-tree v-model='formValidate.combotree' :data="comboTreeData"></sg-combo-tree>
           </sg-form-item>
         </sg-col>
-        <sg-col :column="12">
-          <sg-form-item label="Transfer" prop="transfer">
-            <sg-transfer :data="transferData" :list-height="200" :right-values="formValidate.transfer" @on-change="handleChange"></sg-transfer>
-          </sg-form-item>
-        </sg-col>
       </sg-row>
     </sg-form>
     <sg-row main-center>
-      <sg-col :column="2" style="text-align:center">
-        <sg-button type="primary" @click="submit">Submit</sg-button>
+      <sg-col>
+        <sg-button type="primary" @click="validate">表单校验</sg-button>
+        <sg-button type="primary" @click="resetFields">表单重置</sg-button>
+        <sg-button type="primary" @click="resetField('input')">Input字段重置</sg-button>
+        <sg-button type="primary" @click="validateField('input')">Input字段验证</sg-button>
+        <sg-button type="primary" @click="clearValidate('input')">移除Input字段验证</sg-button>
       </sg-col>
     </sg-row>
   </div>
@@ -149,7 +148,7 @@ export default {
     }
   },
   methods: {
-    submit () {
+    validate () {
       this.$refs.formValidate.validate((valid) => {
         if (valid) {
           this.$msg.success('通过验证')
@@ -158,9 +157,28 @@ export default {
         }
       })
     },
+    resetFields () {
+      this.$refs.formValidate.resetFields()
+    },
+    resetField (prop) {
+      this.$refs[prop].resetField()
+    },
+    validateField (prop) {
+      this.$refs.formValidate.validateField(prop, (err) => {
+        console.log(err)
+      })
+    },
+    clearValidate (prop) {
+      this.$refs.formValidate.clearValidate(prop)
+    },
     handleChange (right, path, move) {
       this.formValidate.transfer = right
     }
   }
 }
 </script>
+<style scoped>
+.sgForm {
+  padding: 20px;
+}
+</style>

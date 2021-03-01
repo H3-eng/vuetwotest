@@ -1,5 +1,11 @@
 <template>
-  <sg-modal title="提示" v-model="alert" modal-type="alert" ok-text="知道了" @on-ok="handleAlertOk">
+  <sg-modal
+    v-model="modalVisible"
+    title="提示"
+    closable
+    maximize
+    @on-ok="handleOk"
+    @on-cancel="handleCancel" >
     <sg-tab value="name1" style="width: 600px;height:350px">
         <sg-tab-pane label="标签一" name="name1">
           <sg-table width="600" :columns="columns" :data="data"></sg-table>
@@ -27,8 +33,15 @@
 </template>
 <script>
 export default {
+  props: {
+    sgModalVisible: {
+      type: Boolean,
+      default: false
+    }
+  },
   data () {
     return {
+      modalVisible: this.sgModalVisible,
       form: {
         date: new Date(),
         color: '#f00',
@@ -80,7 +93,6 @@ export default {
       ],
       model1: '',
       confirm: false,
-      alert: false,
       data1: [{
         'code': '4401',
         'label': '广州市',
@@ -164,26 +176,11 @@ export default {
     }
   },
   methods: {
-    showConfirm () {
-      this.confirm = true
-    },
-    showAlert () {
-      this.alert = true
-    },
-    handleConfirmOk () {
-      console.log('点击了确定')
-      this.confirm = false
+    handleOk () {
       this.$msg.info('点击了确定')
     },
     handleCancel () {
-      console.log('点击了取消')
-      this.$msg.warning('点击了取消')
-    },
-    handleAlertOk () {
-      this.alert = false
-    },
-    handleHidden () {
-      console.log('关闭结束')
+      this.$emit('closeModal')
     }
   }
 }

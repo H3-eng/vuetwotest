@@ -13,6 +13,7 @@
             :props="{value: 'id'}"
             multiple
             get-parent-node
+            :up-without-cascade="true"
             ></sg-combo-tree>
         </li>
       </ul>
@@ -23,7 +24,7 @@
 export default {
   data () {
     return {
-      model1: [],
+      model1: ['yfzx', 'zbtd'],
       data1: [
         {
           label: '南方数码',
@@ -32,10 +33,12 @@ export default {
             {
               label: '研发中心',
               id: 'yfzx',
+              disableCheckbox: true,
               children: [
                 {
                   label: '质保团队',
-                  id: 'zbtd'
+                  id: 'zbtd',
+                  disableCheckbox: true
 
                 },
                 {
@@ -69,7 +72,7 @@ export default {
   },
   methods: {
     setValue () {
-      this.model1 = ['uitd']
+      // this.model1 = ['uitd']
     },
     test1 (data, node) {
       console.log(data, node)

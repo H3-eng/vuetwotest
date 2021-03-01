@@ -4,7 +4,11 @@
       <ul>
         <li>
           <sg-button type="primary" outline @click="openModal">弹窗封装</sg-button>
-          <sgModal></sgModal>
+          <sgModal
+            v-if="sgModalVisible"
+            :sgModalVisible="sgModalVisible"
+            @closeModal="closeModal"
+          ></sgModal>
         </li>
         <li>
         <router-link to="/sgForm">表单</router-link>
@@ -28,12 +32,15 @@ export default {
   },
   data () {
     return {
-      sgModalVisial: false
+      sgModalVisible: false
     }
   },
   methods: {
     openModal () {
-      this.sgModalVisial = true
+      this.sgModalVisible = true
+    },
+    closeModal () {
+      this.sgModalVisible = false
     }
   }
 }
@@ -41,6 +48,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.sgui {
+  padding: 20px;
+}
 h1, h2 {
   font-weight: normal;
 }
