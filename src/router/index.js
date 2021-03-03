@@ -9,6 +9,7 @@ import objDataPro from '@/components/JavaScript/objDataPro'
 import conditionalJudgement from '@/components/JavaScript/conditionalJudgement'
 import taobaoImage from '@/components/taobao/taobaoImage'
 import sgui from '@/components/componentLibrary/sgui'
+import Constructors from '@/components/JavaScript/Constructors'
 Vue.use(Router)
 
 export default new Router({
@@ -53,6 +54,11 @@ export default new Router({
       path: '/sgui',
       name: 'sgui',
       component: sgui
+    },
+    {
+      path: '/Constructors',
+      name: 'Constructors',
+      component: Constructors
     }
   ]
 })

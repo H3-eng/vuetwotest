@@ -28,6 +28,10 @@
           <router-link to="/conditionalJudgement">条件判断</router-link>
           <router-view></router-view>
         </li>
+        <li>
+          <router-link to="/Constructors">构造函数</router-link>
+          <router-view></router-view>
+        </li>
       </ul>
     </div>
     <div>
