@@ -10,6 +10,15 @@
       </ul>
     </div>
     <div>
+      <h2>css相关</h2>
+      <ul>
+        <li>
+          <router-link to="/layout">布局</router-link>
+          <router-view></router-view>
+        </li>
+      </ul>
+    </div>
+    <div>
       <h2>JavaScript相关</h2>
       <ul>
         <li>
@@ -30,6 +39,19 @@
         </li>
         <li>
           <router-link to="/Constructors">构造函数</router-link>
+          <router-view></router-view>
+        </li>
+        <li>
+          <router-link to="/DeepShallowCopy">深拷贝与浅拷贝</router-link>
+          <router-view></router-view>
+        </li>
+      </ul>
+    </div>
+    <div>
+       <h2>vue相关</h2>
+      <ul>
+        <li>
+          <router-link to="/LiftCycle">生命周期</router-link>
           <router-view></router-view>
         </li>
       </ul>
